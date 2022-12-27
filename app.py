@@ -1,12 +1,13 @@
 import streamlit as st
+import pandas as pd
 from src.extraction import load_data
 
 st.set_page_config(layout='wide') 
 
 def main(): 
-    df = load_data()
+    df_raw = load_data()
 
-    st.dataframe(df)
+    st.dataframe(df_raw)
 
 if __name__ == '__main__':
     main()
